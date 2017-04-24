@@ -23,6 +23,7 @@
 </style>
 </head>
 <body>
+  <div id="window" onload="goFullscreen('window'); return false">
 <div class="xout">
 <p class="title">
 Video Editor
@@ -30,6 +31,15 @@ Video Editor
 <div class="xbutton">X</div>
 </div>
 <script>
+  function goFullscreen(id) {
+  var element = document.getElementById(id);       
+  if (element.mozRequestFullScreen) {
+    element.mozRequestFullScreen();
+  } else if (element.webkitRequestFullScreen) {
+    element.webkitRequestFullScreen();
+  }  
+}
+  document.getElementById('clickme').click();
 var vidframe =  document.createElement("canvas");
 vidframe.id = "video"
 vidframe.width = 400;
@@ -39,5 +49,6 @@ document.body.appendChild(vidframe);
 var canvas = document.getElementById("video");
 var context = canvas.getContext("2d");
 </script>
+  </div>
 </body>
 </html>
