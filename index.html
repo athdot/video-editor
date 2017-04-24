@@ -13,5 +13,12 @@
     element.webkitRequestFullScreen();
   }  
 }
+  var myWindow = document.getElementById('bod');
+
+myWindow.onkeydown = function(e){
+    if(e.keyCode === 27){
+        alert('esc key pressed');
+    }
+};
 </script>
 </html>
