@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
   <iframe src="https://athdot.github.io/video-editor/internal-page.html" id="page"></iframe>
+  <p onclick="goFullscreen('page'); return false">Click</p>
 <script>
-  var element = document.getElementById("page");       
+ function goFullscreen(id) {
+  var element = document.getElementById(id);       
   if (element.mozRequestFullScreen) {
     element.mozRequestFullScreen();
   } else if (element.webkitRequestFullScreen) {
     element.webkitRequestFullScreen();
   }  
+}
+  document.getElementById('clickme').click();
 </script>
 </html>
