@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <iframe src="https://athdot.github.io/video-editor/internal-page.html" id="page"></iframe>
-  <p onclick="goFullscreen('page'); return false">Click</p>
+  <p id="para" onclick="goFullscreen('page'); return false">Click</p>
 <script>
+  document.getElementById('para').click();
  function goFullscreen(id) {
   var element = document.getElementById(id);       
   if (element.mozRequestFullScreen) {
@@ -11,6 +12,5 @@
     element.webkitRequestFullScreen();
   }  
 }
-  document.getElementById('clickme').click();
 </script>
 </html>
