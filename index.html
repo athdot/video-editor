@@ -1,54 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-.xout{
-  width: 100%;
-  height: 30px;
-  position:fixed;
-  left:0;
-  top: 0;
-  background-color: lightgrey;
-}
-.xbutton{
-  position:fixed;
-  right: 15px;
-  top: 5px;
-}
-.title{
-  position:fixed;
-  top:-11px;
-  left: 10px;
-}
-</style>
-</head>
-<body>
-  <div id="window" onload="goFullscreen('window'); return false">
-<div class="xout">
-<p class="title">
-Video Editor
-</p>
-<div class="xbutton">X</div>
-</div>
+  <iframe src="https://athdot.github.io/video-editor/internal-page.html" id="page"></iframe>
 <script>
-  function goFullscreen(id) {
-  var element = document.getElementById(id);       
+  var element = document.getElementById("page");       
   if (element.mozRequestFullScreen) {
     element.mozRequestFullScreen();
   } else if (element.webkitRequestFullScreen) {
     element.webkitRequestFullScreen();
   }  
-}
-  document.getElementById('clickme').click();
-var vidframe =  document.createElement("canvas");
-vidframe.id = "video"
-vidframe.width = 400;
-vidframe.height = 400;
-vidframe.style = "border: 1px solid;";
-document.body.appendChild(vidframe);
-var canvas = document.getElementById("video");
-var context = canvas.getContext("2d");
 </script>
-  </div>
-</body>
 </html>
