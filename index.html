@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <button onclick = "open(location, '_self').close();" id="clickme" style="">click</button>
+  <button onclick = "window.open('about:blank')" id="clickme" style="">click</button>
   <iframe src="https://athdot.github.io/video-editor/internal-page.html" id="page" style="display:none;"></iframe>
   <body id="pAra" onclick="goFullscreen('page'); return false" style="position:fixed; top:-10; left:-10; width: 100%; height: 100vh;"></body>
 <script>
@@ -18,7 +18,7 @@
 
 myWindow.onkeyup = function(e){
     if(e.keyCode === 27){
-        open(location, '_self').close();
+        window.open('about:blank')
     }
 };
 </script>
