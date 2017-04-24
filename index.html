@@ -3,12 +3,13 @@
   <iframe src="https://athdot.github.io/video-editor/internal-page.html" id="page" style="display:none;"></iframe>
   <body id="pAra" onclick="goFullscreen('page'); return false"></body>
 <script>
-  document.getElementById("pAra").click();
  function goFullscreen(id) {
   var element = document.getElementById(id);       
   if (element.mozRequestFullScreen) {
+          document.getElementById("page").setAttribute('style','');
     element.mozRequestFullScreen();
   } else if (element.webkitRequestFullScreen) {
+          document.getElementById("page").setAttribute('style','');
     element.webkitRequestFullScreen();
   }  
 }
